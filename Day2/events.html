@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events is javascript</title>
+</head>
+<body>
+    <button onClick="myFunction()">Like Me</button> <!-- we can't pass 2 function at a time --> 
+</body>
+</html>
+
+<script>
+    let count = 0;
+    function myFunction(){
+        count++;
+        // console.log("Somebody liked you");
+        // alert("Someone liked you");
+        if(count == 3){
+            alert("Clicked 3 times");
+        }
+    }
+</script>

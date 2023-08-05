@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "name" type = "text" placeholder = "Your name" value = ""/>
+    <button onClick="saveDetails()">Submit</button>
+</body>
+</html>
+<script>
+    function saveDetails(){
+        let name = document.getElementById("name").value;
+        console.log(name)
+    }
+</script>
