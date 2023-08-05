@@ -6,11 +6,15 @@
     <title>Illustration - 1</title>
 </head>
 <body>
-    <button>Alert Quote</button>
+    <button onclick="showQuote()">Alert Quote</button>
     <p id = "quote">Talk is cheap, show me some code</p>
 </body>
 </html>
 
 <script>
-    // when i click on button i should alert  this quote
+    // when i click on button i should alert this quote
+    function showQuote(){
+        var res = document.getElementById("quote").innerHTML;
+        alert(res);
+    }
 </script>

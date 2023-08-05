@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<body>
+    <h2>Events in JS</h2>
+
+    <button onClick ="addLikes()">Like this post</button>
+    <h4 id ="likeCnt">0</h4>
+</body>
+</html>
+
+<script>
+    let cnt = 0;
+    function addLikes(){
+        cnt--;
+        // console.log(cnt);
+        // console.log(document.getElementById("likeCnt").textContent);
+        // console.log(document.getElementById("likeCnt").innerHTML);
+        document.getElementById("likeCnt").textContent = cnt;
+        // document.getElementById("likeCnt").innerHTML = "<i>" +cnt+"<i>";
+    }
+    
+</script>

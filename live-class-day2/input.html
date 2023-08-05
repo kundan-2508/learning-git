@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "name" type = "text" placeholder = "Your name" value = ""/>
+    <button onclick="saveDetails()">Submit</button>
+    <h4 id="error"></h4>
+</body>
+</html>
+<script>
+    function saveDetails(){
+        var res = document.getElementById("name").value;
+        // if name is having charcater less than 5 throw an error
+        if(res.length < 5){
+            document.getElementById("error").innerText = "Please make it ateast 5 char";
+            // alert("Please make it ateast 5 char")
+        }
+        else{
+            console.log(res)
+            document.getElementById("error").innerText = "";
+        }
+    }
+</script>
