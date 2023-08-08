@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="csk">Dhoni</p>
+    <p class="csk" id="raina">Raina</p>
+    <p class="rcb">Harshal</p>
+    <p class="csk">Jadeja</p>
+    <p class="rcb">Kohli</p>
+    <p class="rcb">Yashasvi</p>
+    <p class="csk">Rayudu</p>
+</body>
+</html>
+
+<script>
+    
+    // console.log(document.querySelectorAll(".csk")) // this is an array
+
+    // document.querySelectorAll(".csk").style.backgroundColor = "yellow";
+
+    document.querySelectorAll(".csk").forEach(function(el, i , arr){
+        el.style.backgroundColor = "yellow"
+    });
+
+</script>

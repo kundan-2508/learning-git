@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Hover me to show tooltip</button>
+    <div>
+        <p>I am tooltip content</p>
+    </div>
+</body>
+</html>
+
+<style>
+    div{
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 5px;
+        background-color: lightcoral;
+        border: none;
+        display: none;
+    }
+    button{
+        border: 1px solid transparent;
+        background-color: cadetblue;
+        padding: 5px 15px;
+    }
+</style>
+
+<script>
+
+    document.querySelector("button").addEventListener("mouseenter", showTooltip);
+    document.querySelector("button").addEventListener("mouseleave", hideTooltip);
+
+    function showTooltip(){
+        document.querySelector("div").style.display = "inline-block";
+    }
+
+    function hideTooltip(){
+        document.querySelector("div").style.display = "none";
+    }
+
+</script>

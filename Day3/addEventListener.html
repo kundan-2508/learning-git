@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>Like Me</button>
+
+</body>
+</html>
+
+<script>
+
+    // addEventListener("event_name", "function_name") 
+
+    document.querySelector("button").addEventListener("click", myFun);
+    document.querySelector("button").addEventListener("mouseover", changeBackground);
+    document.querySelector("button").addEventListener("mouseleave", revertBackground);
+    document.querySelector("button").addEventListener("mouseout", revertBackground);
+    // whenevery we trigger any event, an event object will be created 
+    // we can access that event object inside function parameter
+
+    function myFun(event){
+        console.log(event);
+        console.log(event.type);
+        console.log("Someone Liked me");
+    }
+
+    function changeBackground(event){
+        document.querySelector("button").style.backgroundColor = "yellow"
+    }
+
+    function revertBackground(event){
+        document.querySelector("button").style.backgroundColor = "green"
+    }
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="markAsComplete()" id="btn">Mark as Complete</button>
+</body>
+</html>
+
+<style>
+    button{
+        border-radius: 10px;
+        padding: 5px 10px;
+        background-color: #ddd;
+        border: 0;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    var flag = 1; // incomplete
+    function  markAsComplete(){
+        if(flag){
+            document.getElementById("btn").innerText = "Mark as Incomplete";
+            document.getElementById("btn").style.color = "#fff";
+            document.getElementById("btn").style.backgroundColor = "green";
+            flag = 0;
+        }
+        else{
+            document.getElementById("btn").innerText = "Mark as Complete";
+            document.getElementById("btn").style.color = "black";
+            document.getElementById("btn").style.backgroundColor = "#ddd";
+            flag = 1;
+        }
+    }
+</script>
