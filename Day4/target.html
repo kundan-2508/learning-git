@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
+
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #container > div{
+        background-color: teal;
+        padding: 30px;
+    }
+</style>
+
+<script>
+    // console.log(document.querySelector("#container"));
+    document.querySelector("#container").addEventListener("click", myFun);
+
+    function myFun(event){
+        // console.log(event.target.innerText);
+        console.log(event);
+    }
+</script>

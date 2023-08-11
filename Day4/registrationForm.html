@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <p>Name :</p>
+    <input type ="text" value = "" id = "name"/>
+    <p>Email :</p>
+    <input type ="text" value = "" id = "email"/>
+    <p>Phone :</p>
+    <input type ="text" value = "" id = "phone"/>
+    <p>Address :</p>
+    <input type ="text" value = "" id = "address"/>
+    <p>Gender</p>
+    <select id="gender">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    <br><br>
+    <button id="btn">Submit Details</button>
+    <p id = "error"></p>
+</body>
+</html>
+
+<style>
+
+</style>
+
+<script>
+
+    document.querySelector("#btn").addEventListener("click", printDetails);
+
+    function printDetails(){
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let address = document.getElementById("address").value;
+        let gender = document.getElementById("gender").value;
+        // console.log(name, email, phone, address, gender);
+
+        let obj = {
+            name : name,
+            email : email,
+            phone: phone,
+            gender: gender,
+            address: address
+        }
+        if(checkValidation(name, email, phone, address))
+        {
+            document.getElementById("error").textContent = "Please field highlighted fields";
+            document.getElementById("error").style.color = "red";
+        }
+        else{
+            console.log(obj);
+            document.getElementById("error").textContent = "";
+        }
+    }
+
+    function checkValidation(name, email, phone, address){
+        if(name.length <= 0){
+            // it means name is empty
+            document.getElementById("name").style.border = "2px solid red";
+        }
+        else{
+            document.getElementById("name").style.border = "1px solid black";
+        }
+        if(email.length <= 0){
+            // it means name is empty
+            document.getElementById("email").style.border = "2px solid red";
+        }
+        else{
+            document.getElementById("email").style.border = "1px solid black";
+        }
+        if(phone.length < 10){
+            // it means name is empty
+            document.getElementById("phone").style.border = "2px solid red";
+        }
+        else{
+            document.getElementById("phone").style.border = "1px solid black";
+        }
+        if(address.length <= 0){
+            // it means name is empty
+            document.getElementById("address").style.border = "2px solid red";
+        }
+        else{
+            document.getElementById("address").style.border = "1px solid black";
+        }
+        return (name.length <= 0 || email.length <= 0 
+        || phone.length < 10 || address.length <= 0);
+    }   
+
+</script>
