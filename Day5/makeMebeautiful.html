@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Make me beautiful</button>
+</body>
+</html>
+<style>
+    .beautiful{
+        background-color: teal;
+        color: white;
+        border-radius: 5px;
+        padding: 15px;
+        border: none;
+    }
+</style>
+<script>
+    // document.querySelector("button").addEventListener("click", myFun);
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", myFun);
+    function myFun(event){
+        // btn.style.backgroundColor = "teal";
+        // btn.style.color = "white";
+        // btn.style.border = "none";
+        // btn.style.padding = "15px";
+        // btn.style.borderRadius = "5px";
+        btn.setAttribute("class", "beautiful");
+    }
+</script>

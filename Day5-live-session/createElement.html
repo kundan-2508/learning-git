@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Create 5 h1 tag</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", myFun);
+
+    function myFun(event){
+        // createElement(tag_name)
+        for(let i = 0; i < 5; i++){
+            let h1Tag = document.createElement("h1");
+            h1Tag.innerText = "heading " + parseInt(i+1);
+            document.querySelector("body").append(h1Tag);
+        }
+        
+    }
+</script>

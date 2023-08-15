@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id ="name" type = "text" value = "" placeholder="Your Name"/>
+    <select id="airport">
+        <option>Select Airport</option>
+        <option value="BLR">BLR</option>
+        <option value="CCU">CCU</option>
+        <option value="IXR">IXR</option>
+    </select>
+    <button>Submit</button>
+    <br><br>
+    <table border="1px">
+        <thead>
+            <th>Name</th>
+            <th>Airport</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>Kunan</td>
+                <td>CCU</td>
+                <td>Delete</td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", myFun);
+
+    function myFun(event){
+        let name = document.getElementById("name").value;
+        let airport = document.getElementById("airport").value;
+        // console.log(name, airport);
+        let tRow = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        td1.innerText = name;
+        td2.innerText = airport;
+        td3.innerText ="Delete";
+        td3.addEventListener("click", deleteTodo);
+        tRow.append(td1, td2, td3);
+        document.querySelector("tbody").append(tRow);
+    }
+
+    function deleteTodo(event){
+        // console.log(event.target.parentNode);
+        event.target.parentNode.remove();
+    }
+
+</script>

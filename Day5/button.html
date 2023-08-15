@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let names = ["Primary", "Secondary", "Success", "Danger", "Warning", "Info",
+                "Light", "Dark", "Link"];
+    let colors = ["blue", "grey", "green", "red", "yellow", "cyan", "white",
+                "black", "transparent"];
+    let btnArray = [
+        {color: "white", name: "Primary", backgroundColor : "blue"},
+        {color: "black", name: "Secondary", backgroundColor: "grey"}
+    ];
+    // for(let i = 0; i < 9; i++){
+    //     let btn = document.createElement("button");
+    //     // btn.innerText = names[i];
+    //     // btn.style.backgroundColor = colors[i];
+    //     btn.innerText = btnArray[i].name;
+    //     btn.style.backgroundColor = btnArray[i].backgroundColor;
+    //     btn.style.color = btnArray[i].color;
+    //     document.querySelector("body").append(btn);
+    // }
+
+    btnArray.forEach(function(el, i, arr){
+        let btn = document.createElement("button");
+        btn.innerText = el.name;
+        btn.style.backgroundColor = el.backgroundColor;
+        btn.style.color = el.color;
+        document.querySelector("body").append(btn);
+    });
+</script>

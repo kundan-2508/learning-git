@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // let btn = document.createElement("button");
+    // btn.innerText = "Primary";
+    // btn.style.color = "white";
+    // btn.style.backgroundColor = "blue";
+    // document.querySelector("body").append(btn);
+
+    // let names = ["Primary", "Secondary", "Warning"];
+    // let color = ["blue", "grey", "yellow"];
+    let btnArray = [
+        {name: "Primary", color: "white", backgroundColor:"blue"},
+        {name: "Warning", color: "black", backgroundColor: "yellow"}
+    ]
+
+    // for(let i = 0; i < btnArray.length; i++){
+    //     let btn = document.createElement("button");
+    //     btn.innerText = btnArray[i].name;
+    //     btn.style.backgroundColor = btnArray[i].backgroundColor;
+    //     btn.style.color = btnArray[i].color;
+    //     document.querySelector("body").append(btn);
+    // }
+
+        btnArray.forEach(function(el, i, arr){
+            let btn = document.createElement("button");
+            btn.innerText = el.name;
+            btn.style.color = el.color;
+            btn.style.backgroundColor = el.backgroundColor;
+            document.querySelector("body").append(btn);
+        });
+
+    
+</script>

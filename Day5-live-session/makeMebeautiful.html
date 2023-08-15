@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Make me beautiful</button>
+    <button id="btn2">Make me beautiful too</button>
+</body>
+</html>
+<style>
+    .btn{
+        background-color: teal;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+    }
+</style>
+<script>
+
+    let btn1 = document.querySelector("#btn1");
+    btn1.addEventListener("click", myFun1);
+
+    let btn2 = document.querySelector("#btn2");
+    btn2.addEventListener("click", myFun2);
+
+    function myFun1(){
+        // btn.style.backgroundColor = "teal";
+        // btn.style.color = "white";
+        // btn.style.border = "none";
+        // btn.style.padding = "15px";
+        // btn.style.borderRadius = "5px";
+        btn1.setAttribute("class", "btn");
+    }
+
+    function myFun2(){
+        btn2.setAttribute("class", "btn");
+    }
+
+</script>

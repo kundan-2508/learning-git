@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>Create h1</button> -->
+    <button>Create 10 tags</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", myFun);
+    document.querySelector("button").addEventListener("click", createH1);
+    function myFun(event){
+        // createElement method
+        // pass tag name as parameter
+        let h1Tag = document.createElement("h1");
+        h1Tag.innerText = "Heading 1";
+        document.querySelector("body").append(h1Tag);
+    }
+
+    function createH1(){
+        for(let i = 0; i <10; i++){
+            let h1Tag = document.createElement("h1");
+            h1Tag.innerText = "Heading 1";
+            document.querySelector("body").append(h1Tag);
+        }
+    }
+</script>
