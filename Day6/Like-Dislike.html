@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/Users/kundankumar/Downloads/Passport.jpeg" style="width: 200px; height: 200px;"/>
+    <br><br>
+    <button class="btn" onclick="likePic()">Like</button>
+    <h4>Like Count :</h4> 
+    <h4 id="likeCnt"></h4>
+</body>
+</html>
+<style>
+    .btn{
+        background-color: teal;
+        color: white;
+        border-radius: 5px;
+        padding: 15px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+    let existingCnt = localStorage.getItem("likeCnt");
+    // if(existingCnt == null){
+    //     existingCnt = 0;
+    // }
+    document.getElementById("likeCnt").innerHTML = existingCnt || 0;
+    function likePic(){
+        existingCnt++;
+        localStorage.setItem("likeCnt", existingCnt);
+        document.getElementById("likeCnt").innerHTML = existingCnt;
+    }
+</script>

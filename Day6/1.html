@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1> 
+</body>
+</html>
+
+<script>
+    // Local storage allows you to save data in key value pair
+    // Local storage allows you to save data upto 10MB
+    // It is a web api
+    // Used to store Insensative information
+
+    // Limitations
+    // =>Insecure
+    // =>Limited storage capacity (10 MB)
+
+    // Methods of LocalStorage
+    // =>Storage something in LocalStorage - setItem(<key_name>, <value>)
+    // =>Reading LocalStorage item - getItem(<key_name>)
+    // =>Delete something in LocalStorage - removeItem(<key_name>)
+    // Clearing All Data - clear()
+
+    // LocalStorage only stores strings & numbers
+    // LocalStorage won't accept duplicate keys
+
+    // Storing strings in localStorage
+    // localStorage.setItem("student_name-1", "Kundan");
+    // localStorage.setItem("student_name-2", "Kunal");
+    // localStorage.setItem("student_name-2", "Atmodeep");
+
+    // Storing Numbers in localStorage
+    // localStorage.setItem("mobile", 9999999999);
+
+    // Reading localStorage Item
+    // var student1 = localStorage.getItem("student_name-1");
+    // console.log(student1);
+
+    // Store arrays
+    // let names = ["Kundan", "Kunal", "Mayank"];
+    // localStorage.setItem("names", names);
+
+    // let namesArr = localStorage.getItem("names");
+    // console.log(typeof(namesArr), namesArr);
+
+    // Store objects
+
+    // let obj = {
+    //     "name": "Kundan",
+    //     "age": 26,
+    //     "location": "BLR"
+    // }
+    // localStorage.setItem("obj", obj);
+
+    // JSON - Javascript Object Notation(kind of english language)
+    // universal data format
+    
+    // JSON.stringfy()
+    // let names1 = ["Kundan", "Kunal", "Mayank"];
+    // localStorage.setItem("names1", JSON.stringify(names1));
+    // let names2 = localStorage.getItem("names1");
+    // console.log(names2);
+    // console.log(JSON.parse(names2));
+</script>
+

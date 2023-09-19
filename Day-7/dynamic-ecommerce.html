@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    </div>
+</body>
+</html>
+<script>
+    let items = [
+        {
+            name: "Rebbok Shoe",
+            imgUrl: "/Users/kundankumar/Downloads/Untitled (1).png",
+            desc: "This is sample description",
+            price: "$2099"
+        },
+        {
+            name: "Adidas Shoe",
+            imgUrl: "/Users/kundankumar/Downloads/Untitled (1).png",
+            desc: "This is sample description",
+            price: "$7999"
+        }
+    ];
+    items.forEach((el, i, arr)=>{
+        // create parent div
+        let parentDiv = document.createElement("div");
+        // create img
+        let img = document.createElement("img");
+        img.src = el.imgUrl;
+        img.style.width = "300px";
+        img.style.height = "200px";
+        // create h4
+        let h4 = document.createElement("h4");
+        h4.innerText = el.price;
+        // create p
+        let p = document.createElement("p");
+        p.innerText = el.desc;
+        // create button
+        let btn = document.createElement("button");
+        btn.innerText = "Add to cart";
+        // onclick event
+        btn.addEventListener("click", addToCart(el));
+
+        // append child elements into parent div
+        parentDiv.append(img);
+        parentDiv.append(h4);
+        parentDiv.append(p);
+        parentDiv.append(btn);
+
+        document.querySelector("#container").append(parentDiv);
+    });
+
+    function addToCart(obj){
+
+    }
+</script>

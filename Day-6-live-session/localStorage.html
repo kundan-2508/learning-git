@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>LocalStorage in Javascript</h1>
+</body>
+</html>
+
+<script>
+    // Storing something in localStorage
+    // localStorage.setItem("name", "Kundan");
+    // localStorage.setItem("name", "Atmodeep");
+    // localStorage.setItem("age", 26);
+    
+    // let arr = ["one", "two", "three"];
+    // localStorage.setItem("counter", arr);
+
+    // Reading data from localStorage
+    // let student_name = localStorage.getItem("name");
+    // console.log(student_name);
+    // let student_age = localStorage.getItem("age");
+    // console.log(student_age);
+
+    // let cntArr = localStorage.getItem("counter");
+    // console.log(typeof cntArr);
+
+    // let obj = {
+    //     "name": "Kundan",
+    //     "age": 26,
+    //     "location": "BLR"
+    // }
+    // localStorage.setItem("obj", obj);
+
+    // Remove item from localStorage
+    // localStorage.removeItem("name");
+    // localStorage.removeItem("counter");
+
+    // Clearing out localStorage
+    // localStorage.clear();
+
+    // JSON - Javascript object notation
+
+    let obj1 = {
+        name: "Kundan",
+        age: 26,
+        location : "BLR"
+    };
+
+    // let obj2 = {
+    //     "name": "Kundan",
+    //     "age": 26,
+    //     "location" : "BLR"
+    // };
+
+    // let json = JSON.stringify(obj1);
+    // console.log(json);
+
+    // localStorage.setItem("obj1", obj1); -- will not be using this one
+    localStorage.setItem("obj2", JSON.stringify(obj1));
+
+    // let arr = ["one", "two", "three"];
+    // localStorage.setItem("arr", JSON.stringify(arr));
+
+    // let numArr = localStorage.getItem("arr");
+    // numArr = JSON.parse(numArr);
+    // console.log(numArr[0], numArr[1]);
+
+    let obj = JSON.parse(localStorage.getItem("obj2"));
+    console.log(obj);
+
+</script>
