@@ -15,7 +15,7 @@
 <script>
 
     // addEventListener("event_name", "function_name") 
-
+    // console.log(document.querySelector("button"));
     document.querySelector("button").addEventListener("click", myFun);
     document.querySelector("button").addEventListener("mouseover", changeBackground);
     document.querySelector("button").addEventListener("mouseleave", revertBackground);
@@ -24,10 +24,10 @@
     // we can access that event object inside function parameter
 
     function myFun(event){
-        console.log(event);
-        console.log(event.type);
-        console.log(event.target);
-        console.log(event.target.innerText);
+        // console.log(event);
+        // console.log(event.type);
+        // console.log(event.target);
+        // console.log(event.target.innerText);
         console.log("Someone Liked me");
     }
 

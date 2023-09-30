@@ -17,7 +17,7 @@
 //     console.log(el, arr);
 // });
 
-// let nums = [2,3,4,5,6,7];
+let nums = [2,3,4,5,6,7];
 // nums.forEach(function(el,i, arr){
 //     console.log("Square of "+ el + " is " + el**2);
 // });

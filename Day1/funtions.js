@@ -25,7 +25,7 @@
 // function sum(a,b){ // a,b is parameters
 //     console.log(a+b);
 // }
-// sum(2,3) // 2,3 is argument
+// sum(2,13) // 2,3 is argument
 
 // function eatBreakfast(item, quantity){
 //     console.log("I will eat "+ quantity + " " + item + " at 10 PM");

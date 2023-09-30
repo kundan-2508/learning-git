@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me to add 10 & 34</button>
+</body>
+</html>
+<script>
+    document.querySelector("#btn").addEventListener("click", myFun);
+
+    function myFun(){
+        let x = 10;
+        let y = 34;
+        let res = getResult(x,y);
+        console.log(res);
+    }
+
+    function getResult(x,y){
+        return x+y;
+    }
+</script>

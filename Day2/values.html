@@ -13,6 +13,7 @@
 <script>
     function saveDetails(){
         let name = document.getElementById("name").value;
-        console.log(name)
+        document.getElementById("name").value = name.toUpperCase();
+        console.log(name);
     }
 </script>

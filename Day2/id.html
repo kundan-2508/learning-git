@@ -17,7 +17,12 @@
 
 <script>
     // getElementById("id-name") : case sensitive is important here
-    console.log(document.getElementById("heading"));
-    console.log(document.getElementById("heading").innerText);
-    console.log(document.getElementById("heading").textContent);
+    // console.log(document.getElementById("heading"));
+    // console.log(document.getElementById("heading").innerText);
+    // console.log(document.getElementById("heading").textContent);
+    var a = document.getElementById("heading");
+    console.log(a);
+    console.log(a.innerText);
+    console.log(a.innerHTML);
+    a.innerHTML = "<h1>something else</h1>";
 </script>
