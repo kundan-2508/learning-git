@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="name"/>
+    <input type="text" id="price" placeholder="price"/>
+    <button onClick="createProduct()">Submit</button>
+</body>
+</html>
+
+<script>
+    let data = [];
+    function createProduct(){
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let p1 = new nikeProduct(name, price);
+        data.push(p1);
+        console.log(data);
+    };
+
+    function nikeProduct(n, p){
+        this.name = n;
+        this.price = p;
+    }
+</script>
