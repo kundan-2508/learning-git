@@ -34,6 +34,6 @@
 // array      reduce    single value
 
 // Chaining
-// forEach().map();  Not possible as output of foreach is undefined
-// map().forEach(); It is possible bcz output of map is an array
+// arr.forEach().map();  Not possible as output of foreach is undefined
+// arr.map().forEach(); It is possible bcz output of map is an array
 // we can chain in differenet ways validation the rules

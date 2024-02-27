@@ -13,11 +13,17 @@
 //     console.log(arr);
 // });
 
+// let temp = names.forEach(function(el, ind, arr){
+//     // console.log(el, ind, arr);
+//     return el**2; // this will not work
+// });
+// console.log(temp)
+
 // names.forEach(function(el, ind, arr){
 //     console.log(el, arr);
 // });
 
-let nums = [2,3,4,5,6,7];
+// let nums = [2,3,4,5,6,7];
 // nums.forEach(function(el,i, arr){
 //     console.log("Square of "+ el + " is " + el**2);
 // });
@@ -26,12 +32,17 @@ let nums = [2,3,4,5,6,7];
 //     return el**2;
 // });
 
+// this is another way of writing forEach
+// nums.forEach((el,i, arr)=>{
+//     console.log("Square of "+ el + " is " + el**2);
+// });
+
 // console.log(res) // it will give us undefined, hence proved forEach doesn't return anything
 
 // let res = nums.map(function(el,i, arr){
 //     return el**2;
 // });
-// console.log(res);
+// console.log(res, nums);
 
 // syntax of map & foreach are same
 // map is returning an array, i.e box at no additional charges
@@ -39,4 +50,4 @@ let nums = [2,3,4,5,6,7];
 // let res = nums.forEach(function(el,i, arr){
 //     box.push(el**2);
 // });
-// console.log(box); // it is taking additional charges
+// console.log(res, box); // it is taking additional charges
