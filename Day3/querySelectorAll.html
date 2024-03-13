@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p class="csk">Dhoni</p>
+    <p class="csk" id="raina">Dhoni</p>
     <p class="csk" id="raina">Raina</p>
     <p class="rcb">Harshal</p>
     <p class="csk">Jadeja</p>
@@ -25,6 +25,11 @@
     document.querySelectorAll(".csk").forEach(function(el, i , arr){
         el.style.backgroundColor = "yellow";
     });
+
+    // querySelectorAll will also works with multiple items with same id
+    // document.querySelectorAll("#raina").forEach(function(el, i, arr){
+    //     el.style.color = "blue";
+    // })
 
     document.querySelectorAll(".rcb").forEach(function(el, i , arr){
         el.style.backgroundColor = "red";
