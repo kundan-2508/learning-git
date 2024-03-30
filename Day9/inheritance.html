@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Learning Inheritance
+</body>
+</html>
+
+<script>
+    // let arr = [1,2,3];
+    // console.log(arr);
+
+    // let str = "hello world";
+    // console.log("str : ",str); // this is what we do
+
+    // this is what js does internally
+    // let str2 = new String("hello");
+    // console.log("str2 :" , str2) // here str2 is an object
+    
+    // console.log(console) // here console is an object and log is a method
+    
+
+    // We can use JS inheritance in 2 ways
+    // 1. Constructor functions - this is prefereable
+    // 2. Object.create() method
+
+    // What is .prototype(dot prototype in every object)
+    // function nikeProduct(name, price){
+    //     this.name = name;
+    //     this.price = price;
+    //     // this.discount = function(){
+    //     //     console.log("20% discount on this");
+    //     // }
+    // }
+    // nikeProduct.prototype.discount = function(){
+    //     console.log("20% discount on price");
+    // }
+    // let p1 = new nikeProduct("Rebook", 7400);
+    // console.log(p1);
+    // console.log(p1.discount());
+    // console.log(p1.prototype.discount()); // this will not work, have you seen arr.prototype.length ?, it's arr.length only
+
+    // where Js creators have stored it ? - prototype(clearly visible in browser console)
+    // where we are storing the methods(discount method) right now ? - in the Object
+    // are we going against the js architecture ? - yes
+    // should we do this ? - No
+    // what's the idea place to store ? - prototype
+    // how we can store this discount method in prototype ? (line no 39)
+    // keep property in object and methods in prototype
+    // who is making inheritance possible in JS - prototype
+
+    // Lets hack
+    // let name = new String('hellow');
+    // can we add our own function inside string prototype
+    // who is father of name - string
+    // what is 'String' - constructor function(String is a function, when you add new keyword before that, it becomes a constructor function)
+    // if we want to add our own method, where we need to add - prototype
+    // how can we add a method to prototype
+    // String.prototype.दिखाये = function(){
+    //     console.log(this);
+    //     console.log(this.toString())
+    // }
+
+    // name.दिखाये()
+
+
+</script>
