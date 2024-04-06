@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+Learning Fetch
+==============
+    </pre>
+    <input class = "search-box" id="searchText" value = "" placeholder="serach movies"/>
+    <button class="search-btn" onclick="searchMoviesUsingAsyncAwait()">Search</button>
+    <div id="movie-list">
+        <!-- movie list goes here -->
+    </div>
+</body>
+</html>
+
+<script>
+    // what is fetch - it brings something
+    // kuch lana hai to khi jana hoga ki ni ?
+    // server me jana hota hai in terms of coding
+    // what is the identity of a server where fetch wants to go - url ?
+    // visit https://www.omdbapi.com/
+    // what is apiKey - to unlock their door
+
+    // 628c1c52 - my api key
+
+    function searchMovies(){
+        let query = document.getElementById("searchText").value;
+        // console.log(query);
+        // who takes us to the server
+        // what is the argument to fetch
+        // http://www.omdbapi.com/?apikey=[yourkey]&
+        // http://www.omdbapi.com/?apikey=628c1c52& - in my case 
+
+        let response = fetch(`http://www.omdbapi.com/?apikey=628c1c52&s=${query}`);
+        // console.log(response);
+        // response is a promise
+        // fetch return a promise
+        // why fetch is a promise
+        // 1. because there is a possibility of rejection
+        // 2. because it takes time
+        // 3. pending, fullfilled, rejected
+        // so promise is a gift box
+        // how do you open promise gift box?
+        // .then and .catch
+        response
+            .then(function(success){
+                // console.log(success);
+                // collecting the stream
+                let data = success.json();
+                // console.log(data);
+                // here data is also a promise, we have to open gift box
+                data.then(function(resp){
+                    console.log(resp);
+                    appendMovies(resp.Search)
+                }).catch(function(err){
+                    console.log(err);
+                });
+            }).catch(function(error){
+                console.log(error)
+            });
+        // in response body is a readable stream
+        // where is the actual movie names
+        // we have to collect the stream
+    }
+    
+    function appendMovies(movies){
+        movies.forEach(element => {
+            let parentDiv = document.createElement('div');
+            let img = document.createElement('img');
+            img.src = element.Poster;
+            let p = document.createElement('p');
+            p.innerText = element.Title;
+            parentDiv.append(img);
+            parentDiv.append(p);
+            document.getElementById('movie-list').append(parentDiv);
+        });
+    }
+
+    // same thing using async and await
+    async function searchMoviesUsingAsyncAwait(){
+        let query = document.getElementById("searchText").value;
+        let response = await fetch(`http://www.omdbapi.com/?apikey=628c1c52&s=${query}`);
+        let data = await response.json();
+        console.log('data :', data);
+
+        // how to catch the error here
+        try{
+            let query = document.getElementById("searchText").value;
+            let response = await fetch(`http://www.omdbapi.com/?apikey=628c1c52&s=${query}`);
+            let data = await response.json();
+            console.log('data :', data);
+        }
+        catch(error){
+            console.log('error :', error);
+        }
+
+        // the above is called exception handling
+    }
+     
+</script>
+
+<style>
+    .search-btn{
+        border: 1px solid black;
+        background-color: chartreuse;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .search-box{
+        width: 200px;
+        height: 38px;
+        font-size: 20px;
+        padding: 5px;
+    }
+</style>
