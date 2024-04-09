@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in Javascript</title>
+</head>
+<body>
+    <img id = "loading_img" src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHlhcTR2ZjBhems2bTRodW0yeTgzcmpvdWVtN2NzNGd4cG5kYmIzdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oEjI6SIIHBdRxXI40/giphy.webp" alt = ""/>
+</body>
+</html>
+
+<script>
+    // what is promise
+    // if google was a human
+    // if instagram was a human
+    // 1. show content
+    // 2.  upload content
+
+    let content = {
+        caption : 'abba ni manenge',
+        type : 'image',
+        user : 'daljeet',
+        content : 'https://xyz.net/abc'
+    };
+    // all of these activity will take time to upload into instagram database or not ?
+    
+    // basic example of promises
+    // simulating a payment , takes time ?
+    // you will get cycle if you score 90
+    // question is can you get before exam ? No
+    // it means it takes time
+    // in order to happen 1 thing another has to happen - dependency
+    // in technical terms in order to run, some code some other code needs to run first
+    // post is uploaded, even before post is not uploaded ? - No
+    // movies data coming from server, does it take time ?
+
+    // what user will see till the time you get movies data ?
+    // we should show loader
+    // let's talk dependency
+
+    // let getMeData = new Promise();
+    // what is the nature of Promise
+    // It is constructor function because of new object
+    // what do we pass to Promise - function
+    let getMeData = new Promise(function(resolve, reject){
+        // three states of promise
+        // 1. pending
+        // 2. resolved
+        // 3. rejected
+        // resolve()
+    });
+    // console.log(getMeData)
+    getMeData.then((success)=>{
+
+    }).catch((error)=>{
+
+    });
+
+</script>
