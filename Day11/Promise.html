@@ -48,13 +48,14 @@
         // 1. pending
         // 2. resolved
         // 3. rejected
-        // resolve()
+        // resolve("success")
+        // reject("error")
     });
     // console.log(getMeData)
     getMeData.then((success)=>{
-
+        console.log(success)
     }).catch((error)=>{
-
+        console.log(error)
     });
 
 </script>
